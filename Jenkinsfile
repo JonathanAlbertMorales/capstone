@@ -11,7 +11,8 @@ pipeline {
     }
     stage('Test') {
               steps {
-                  sh 'npm install'
+                  sh 'npm set progress=false'
+                  sh 'npm install --verbose'
                   sh 'npm run lint'
               }
          }
