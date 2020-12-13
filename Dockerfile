@@ -1,6 +1,6 @@
 FROM node:10-alpine as builder
 
-COPY package.json package-lock.json ./
+COPY package.json ./
 
 RUN npm install && mkdir /app-ui && mv ./node_modules ./app-ui
 
