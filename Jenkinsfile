@@ -9,13 +9,6 @@ pipeline {
         git url:'https://github.com/JonathanAlbertMorales/capstone.git', branch:'master'
       }
     }
-    stage('Test') {
-              steps {
-                  sh 'npm set progress=false'
-                  sh 'npm install --verbose'
-                  sh 'npm run lint'
-              }
-         }
       stage("Build image") {
             steps {
                 script {
